@@ -1,0 +1,40 @@
+{
+  "name": "workamajig",
+  "description": "Node Request-based API wrapper for the Workamajig API",
+  "author": "Asymmetrik Ltd. (https://asymmetrik.com)",
+  "contributors": [
+    "Bryan Young <byoung@asymmetrik.com>"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": "",
+  "version": "0.0.0",
+  "readme": "README.md",
+  "engines": {
+    "node": ">= v0.10.0"
+  },
+  "keywords": [
+    "workamajig",
+    "project management",
+    "rest",
+    "api"
+  ],
+  "main": "lib/workamajig.js",
+  "scripts": {
+    "mocha": "mocha",
+    "test": "npm run lint && mocha",
+    "lint": "jscs ."
+  },
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "lodash.isplainobject": "^4.0.6",
+    "object-assign": "^4.1.0",
+    "qs": "^2.4.2"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "chai-as-promised": "^4.1.1",
+    "jscs": "^2.3.5",
+    "mocha": "~2.1.0",
+    "stripe-javascript-style": "^1.0.1"
+  }
+}
