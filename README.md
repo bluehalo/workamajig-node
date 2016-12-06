@@ -1,15 +1,15 @@
-#A Node Request-based API wrapper for the Workamajig API
+##A Node Request-based API wrapper for the Workamajig API
 
-##Installation
+###Installation
 ```
 npm install workamajig --save
 ```
 
-##Documentation
+###Documentation
 
 See http://help.workamajig.com/api-overview for API documentation.
 
-##Configuration
+###Configuration
 
 Pass in a config object with the required params:
 ```
@@ -21,7 +21,7 @@ var workamajig = require('workamajig')({
 });
 ```
 
-##API Overview
+###API Overview
 
 Every resource is accessed via your workamajig instance:
 ```
@@ -55,19 +55,19 @@ workamajig.projects.create({
   });
 ```
 
-##Available resources & methods
+###Available resources & methods
 
 Where you see ```params``` it is a plain JavaScript object, e.g. ```{ someFoo: 'bar' }```
 
-activities
-contacts
-opportunities
-projects
-timesheets
-todos
-zapier
+- activities
+- contacts
+- opportunities
+- projects
+- timesheets
+- todos
+- zapier
 
-##Development
+###Development
 
 Run all tests:
 ```
