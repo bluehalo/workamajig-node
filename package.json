@@ -28,7 +28,8 @@
     "bluebird": "^2.10.2",
     "lodash.isplainobject": "^4.0.6",
     "object-assign": "^4.1.0",
-    "qs": "^2.4.2"
+    "qs": "^2.4.2",
+    "request": "^2.79.0"
   },
   "devDependencies": {
     "chai": "^1.10.0",

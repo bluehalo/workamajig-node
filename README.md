@@ -77,5 +77,5 @@ $ npm test
 
 Run a single test suite:
 ```
-$ npm run mocha -- test/Error.spc.js
+$ npm run mocha -- test/Error.spec.js
 ```

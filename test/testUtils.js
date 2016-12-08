@@ -6,20 +6,19 @@ require('mocha');
 // Ensure we are using the 'as promised' libs before any tests are run:
 require('chai').use(require('chai-as-promised'));
 
+var WORKAMAJIG_TEST_CONFIG = {
+  accessToken: 'fakeAccessToken',
+  userToken: 'fakeUserToken',
+}
+
 var utils = module.exports = {
-
-  getUserWorkamajigKey: function() {
-    var key = process.env.WORKAMAJIG_TEST_API_KEY || 'tGN0bIwXnHdwOa85VABjPdSn8nWY7G7I';
-
-    return key;
-  },
 
   getSpyableWorkamajig: function() {
     // Provide a testable workamajig instance
     // That is, with mock-requests built in and hookable
 
     var Workamajig = require('../lib/workamajig');
-    var workamajigInstance = Workamajig('fakeAuthToken');
+    var workamajigInstance = Workamajig(WORKAMAJIG_TEST_CONFIG);
 
     workamajigInstance.REQUESTS = [];
 
@@ -58,10 +57,7 @@ var utils = module.exports = {
     function CleanupUtility(timeout) {
       var self = this;
       this._cleanupFns = [];
-      this._workamajig = require('../lib/workamajig')(
-        utils.getUserWorkamajigKey(),
-        'latest'
-      );
+      this._workamajig = require('../lib/workamajig')(WORKAMAJIG_TEST_CONFIG);
       afterEach(function(done) {
         this.timeout(timeout || CleanupUtility.DEFAULT_TIMEOUT);
         return self.doCleanup(done);
