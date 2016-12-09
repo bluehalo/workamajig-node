@@ -16,10 +16,10 @@ See http://help.workamajig.com/api-overview for API documentation.
 Pass in a config object with the required params:
 ```
 var workamajig = require('workamajig')({
-  accessToken: WORKAMAJIG_ACCESS_TOKEN,
-  userToken  : WORKAMAJIG_USER_TOKEN,
-  subdomain  : WORKAMAJIG_API_BASE_URL,
-  apiVersion : WORKAMAJIG_API_VERSION
+  host        : WORKAMAJIG_CLIENT_URL,
+  version     : WORKAMAJIG_API_VERSION,
+  accessToken : WORKAMAJIG_ACCESS_TOKEN,
+  userToken   : WORKAMAJIG_USER_TOKEN,
 });
 ```
 
@@ -59,7 +59,7 @@ workamajig.projects.create({
 
 ###Available resources & methods
 
-Where you see ```params``` it is a plain JavaScript object, e.g. ```{ someFoo: 'bar' }```
+Params are passed as plain JavaScript object, e.g. ```{ someFoo: 'bar' }```
 
 - activities
 - contacts
@@ -82,4 +82,13 @@ $ npm test
 Run a single test suite:
 ```
 $ npm run mocha -- test/Error.spec.js
+```
+
+### Example project
+
+There is a simple example project under ```/example```. To run the project,
+from the root directory, copy ```config.env.example``` to ```config.env``` and
+edit the file to add your host, version, access and user tokens. Then, run:
+```
+$ node ./example/index.js
 ```
