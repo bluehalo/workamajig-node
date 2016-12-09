@@ -34,6 +34,7 @@
   "devDependencies": {
     "chai": "^1.10.0",
     "chai-as-promised": "^4.1.1",
+    "dotenv": "^2.0.0",
     "jscs": "^2.3.5",
     "mocha": "~2.1.0",
     "stripe-javascript-style": "^1.0.1"

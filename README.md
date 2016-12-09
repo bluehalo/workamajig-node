@@ -63,9 +63,11 @@ Where you see ```params``` it is a plain JavaScript object, e.g. ```{ someFoo: '
 - contacts
 - opportunities
 - projects
+- services
+- tasks
 - timesheets
 - todos
-- zapier
+- users
 
 ###Development
 
