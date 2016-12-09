@@ -1,5 +1,7 @@
 ##A Node Request-based API wrapper for the Workamajig API
 
+*Props to [stripe.js](https://github.com/stripe/stripe-node) for the general structure of this module.*
+
 ###Installation
 ```
 npm install workamajig --save
