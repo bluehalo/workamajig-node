@@ -6,8 +6,8 @@
     "Bryan Young <byoung@asymmetrik.com>"
   ],
   "license": "SEE LICENSE IN LICENSE",
-  "repository": "",
-  "version": "0.0.0",
+  "repository": "https://github.com/Asymmetrik/workamajig-node",
+  "version": "0.0.1",
   "readme": "README.md",
   "engines": {
     "node": ">= v0.10.0"
