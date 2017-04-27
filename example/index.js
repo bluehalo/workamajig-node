@@ -12,13 +12,25 @@ var WORKAMAJIG_CONFIG = {
 var workamajig = require('../lib/workamajig')(WORKAMAJIG_CONFIG);
 
 var API_RESOURCE = 'projects';
-var API_COMMAND = 'list';
+var API_COMMAND = 'create';
+var API_PARAMS = {
+    "projectName":"API Project Test 3",
+    "client": "1",
+    "startDate":"2017-03-05",
+    "projectStatus":"EST"
+   };
 
-var API_PARAMS = {};
-
-workamajig[API_RESOURCE][API_COMMAND](API_PARAMS)
+// workamajig[API_RESOURCE][API_COMMAND](API_PARAMS)
+//   .then(function(results) {
+//     console.log('Create Results: %j', results);
+//     workamajig[API_RESOURCE].list({'projectKey':results.success[0].projectKey});
+//   })
+//   .catch(function(err) {
+//     console.error('Error: %o', err);
+//   });
+workamajig[API_RESOURCE].list({projectKey:'aTVKSDh4c05sdDBZU205MlByWk1TZz090'})
   .then(function(results) {
-    console.log('Results: %j', results);
+    console.log('List Results: %j', results);
   })
   .catch(function(err) {
     console.error('Error: %o', err);
